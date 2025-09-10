@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Frutería Virtual</title>
+  <style>
+    fieldset {
+      border: 2px solid #000;
+      padding: 10px;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <form action="factura.php" method="post">
+    <fieldset>
+      <legend>Producto</legend>
+      <table>
+        <tr>
+          <td>
+            <label><input type="radio" name="producto" value="Judías"> Judías</label><br>
+            <label><input type="radio" name="producto" value="Garbanzos"> Garbanzos</label><br>
+            <label><input type="radio" name="producto" value="Lentejas"> Lentejas</label>
+          </td>
+
+          <td>
+            Cantidad <input type="text" name="cantidad" size="5"> Kgs
+          </td>
+
+          <td>
+            <label><input type="checkbox" name="pago" value="Visa"> Tarjeta Visa</label>
+          </td>
+
+          <td>
+            <button type="submit">ENVIAR DATOS</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>
