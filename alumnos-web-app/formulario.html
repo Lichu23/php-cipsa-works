@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <h2>Busqueda de Alumnos</h2>
+    <form action="busqueda.php" method="GET">
+        Filtro: 
+        <select name="filtro">
+            <option value="1">Nombre</option>
+            <option value="2">Primer Apellido</option>
+            <option value="3">Segundo Apellido</option>
+            <option value="4">Cuenta</option>
+        </select>
+        <br>
+        Argumento: <input type="text" name="argumento">
+        <br>
+        Ordenado <br>
+        Nombre <input type="radio" name="orden" value="1"><br>
+        Cuenta <input type="radio" name="orden" value="2"><br>
+        Calificacion <input type="radio" name="orden" value="3"><br>
+        <input type="submit" value="buscar" name="accion">
+    </form>
+
+
+    <hr>
+    <h2>Filtrado por calificaciones</h2>
+        <form action="busqueda.php" method="GET">
+            Mayor <input type="radio" name="filtro" value="mayor" checked>
+            Menor <input type="radio" name="filtro" value="menor">
+            <br>
+            <input type="number" name="argumento" max="10" min="0"><br>
+            <input type="submit" value="filtrar" name="accion">
+        </form>
+    
+    <hr>
+    <h2>Alumnos</h2>
+       <ul>
+        <li><a href="busqueda.php?accion=media">Ver calificacion media</a></li>
+        <li><a href="busqueda.php?accion=maximo">Ver alumno con nota maxima</a></li>
+        <li><a href="busqueda.php?accion=minimo">Ver alumno con nota minima</a></li>
+       </ul>
+    </body>
+</html>
