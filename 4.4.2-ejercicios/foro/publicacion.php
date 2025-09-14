@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $clave   = trim($_POST["clave"] ?? "");
     $contenido = trim($_POST["contenido"] ?? "");
 
-    // Validaciones
     if ($usuario === "" || $clave === "") {
         $error = "Usuario y contraseña son obligatorios.";
     } elseif ($contenido === "") {
@@ -29,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (!$ok) {
             $error = "Usuario o contraseña incorrectos.";
         } else {
-            // Limpiar caracteres no permitidos
+            // Quitar caracteres no validos
             $contenido = str_replace(["<", ">"], "", $contenido);
             $fecha = date("Y-m-d H:i:s");
 
