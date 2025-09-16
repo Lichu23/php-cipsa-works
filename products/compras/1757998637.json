@@ -1,0 +1,14 @@
+{
+    "comprador": "Pedro",
+    "mail": "lichu@correo.com",
+    "productos": [
+        {
+            "id": 123,
+            "nombre": "Té Dharamsala",
+            "categoria": "Bebidas",
+            "precio": 18,
+            "unidades": 6,
+            "importe": 108
+        }
+    ]
+}
